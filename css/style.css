@@ -1,0 +1,193 @@
+/*
+* Copyright (c) 2016 Evgenii Dobrovidov
+* This file is part of "Unit Converter".
+*
+* "Unit Converter" is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* "Unit Converter" is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with "Unit Converter".  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+
+.ui-header .ui-title {
+	color: white;
+}
+
+/*MENU*/
+.ui-page#main .ui-content section {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+
+	overflow: hidden;
+	overflow-y: auto;
+}
+.ui-page#main .ui-content section.no-flex {
+	display: block;
+	padding: 10px 0;
+}
+.ui-page#main .ui-content section .grid-item {
+	width: 50%;
+	height: 50%;
+	float: left;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+}
+.ui-page#main .ui-content section img, .ui-page#main .ui-content section span {
+	display: block;
+	width: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+.ui-page#main .ui-content section img {
+	margin-bottom: 20px;
+}
+.ui-page#main .ui-content section .grid-item img {
+	margin-bottom: 10px;
+}
+.ui-page#main .ui-content section span {
+	padding: 0 30px;
+}
+.ui-page#main .ui-content section .grid-item span {
+	font-size: 80%;
+	padding: 0;
+}
+
+/*CATEGORY*/
+.ui-page#category .ui-listview li {
+	overflow: hidden;
+	font-size: 80%;
+	min-height: 60px;
+	padding: 10px 15px;
+	line-height: 35px;
+}
+.ui-page#category .ui-listview li.system-name {
+	background: #4d2d10;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	min-height: 25px;
+	height: 55px;
+	padding: 0 15px;
+	font-weight: bold;
+	line-height: 55px;
+}
+.ui-page#category .ui-listview li.unit {
+	
+}
+.ui-page#category .ui-listview li.unit.current {
+	border: 1px solid #ac6a2e;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ui-page#category .ui-listview li div.unit-name {
+	width: 70%;	
+	float: left;
+	white-space: normal;
+}
+.ui-page#category .ui-listview li div.current-value {
+	width: 30%;
+	height: auto;
+	float: right;
+	text-align: right;
+	white-space: normal;
+	/*white-space: pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;*/
+}
+.ui-page#category .ui-listview.init li div.unit-name {
+	width: 100%;
+}
+.ui-page#category .ui-listview.init li div.current-value {
+	display: none;
+}
+
+/*INPUT*/
+.ui-page#input .digits {
+	height: 25%;
+	text-align: right;
+	font-size: 200%;
+	overflow: hidden;
+	padding: 3px 5px;
+	line-height: 1em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ui-page#input .digits.error {
+	border: 3px solid #c90000;
+}
+.ui-page#input .digits > span {
+	line-height: 80px;
+}
+.ui-page#input .digits > span.tall {
+	line-height: 110px;
+}
+.ui-page#input .keys {
+	font-weight: bold;
+	color: white;
+	font-size: 140%;
+	height: 75%;
+}
+.ui-page#input .keys .row {
+	overflow: hidden;
+	height: 20%;
+}
+.ui-page#input .keys .row > div {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	height: 100%;
+	width: 33.3333333%;
+	float: left;
+	background: #7e5f44;
+	border-bottom: 1px solid #3a210a;
+	border-right: 1px solid #3a210a;
+	text-align: center;
+	line-height: 1em;
+}
+.ui-page#input .keys .row > div img {
+	display: block;
+	margin: 0 auto;
+	max-width: 32px;
+}
+.ui-page#input .keys .row .digit-button:active {
+	background: #5e4530;
+}
+.ui-page#input .keys .row .extra-button {
+	background: #ac6a2e;
+}
+.ui-page#input .keys .row .enter-button {
+	background: #ac6a2e;
+}
+.ui-page#input .keys .row .erase-button {
+	background: #ac6a2e;
+}
+.ui-page#input .keys .row .cancel-button {
+	background: #ac6a2e;
+}
+.ui-page#input .keys .row :not(.digit-button):active {
+	background: #8e511a;
+}
